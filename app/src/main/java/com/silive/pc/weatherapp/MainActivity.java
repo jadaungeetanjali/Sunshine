@@ -9,5 +9,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ForecastListFragment forecastListFragment = new ForecastListFragment();
+        getSupportFragmentManager().beginTransaction().add(R.id.main_activity, forecastListFragment).commit();
+
     }
 }
